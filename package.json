@@ -1,0 +1,23 @@
+{
+  "name": "create-swc-app",
+  "version": "0.0.1",
+  "description": "A CLI tool to help boostraps various applications with all things swc.",
+  "bin": "bin/index",
+  "main": "src/index.js",
+  "license": "MIT",
+  "keywords": [
+    "cli",
+    "create-app",
+    "swc-app",
+    "swc",
+    "swc-react"
+  ],
+  "dependencies": {
+    "@swc/core": "^1.2.71",
+    "chalk": "^4.1.2",
+    "esm": "^3.2.25",
+    "inquirer": "^8.1.2",
+    "minimist": "^1.2.5",
+    "ncp": "^2.0.0"
+  }
+}
