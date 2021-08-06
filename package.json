@@ -16,7 +16,6 @@
     "swc-react"
   ],
   "dependencies": {
-    "@swc/core": "^1.2.71",
     "chalk": "^4.1.2",
     "esm": "^3.2.25",
     "inquirer": "^8.1.2",
