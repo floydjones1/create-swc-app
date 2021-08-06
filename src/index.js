@@ -4,6 +4,7 @@ import chalk from "chalk";
 import ncp from "ncp";
 import { promisify } from "util";
 import { fileURLToPath } from "url";
+import Listr from "listr";
 
 const access = promisify(fs.access);
 const copy = promisify(ncp);
@@ -46,7 +47,17 @@ const createProject = async (opts) => {
     process.exit(1);
   }
 
-  await copyTemplateFiles(opts);
+  const tasks = new Listr([
+    {
+      title: "Copying project files",
+      task: () => copyTemplateFiles(opts),
+    },
+  ]);
+  await tasks.run();
+  log(
+    `\nDone project setup, please install packages and then run:\n 
+    ${chalk.green("npm start")} or ${chalk.green("yarn start")}`
+  );
 };
 
 const getOptions = (args) => {

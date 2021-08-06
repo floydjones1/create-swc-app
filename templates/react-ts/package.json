@@ -1,9 +1,39 @@
 {
   "name": "my-app",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./src/index.tsx",
   "license": "MIT",
   "dependencies": {
-    "@swc/core": "^1.2.71"
+    "@swc/core": "^1.2.74",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "bootstrap": "mkdir dist",
+    "start": "webpack serve --progress --mode development",
+    "build": "yarn clean && yarn bootstrap && webpack --mode production"
+  },
+  "devDependencies": {
+    "@swc/jest": "^0.1.4",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@types/jest": "^26.0.24",
+    "@types/react": "^17.0.15",
+    "@types/react-dom": "^17.0.9",
+    "css-loader": "^6.2.0",
+    "esbuild-loader": "^2.14.0",
+    "fork-ts-checker-webpack-plugin": "^6.3.1",
+    "html-webpack-plugin": "^5.3.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.0.6",
+    "sass": "^1.37.5",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.2.1",
+    "swc-loader": "^0.1.14",
+    "typescript": "^4.3.5",
+    "webpack": "^5.48.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
   }
 }
