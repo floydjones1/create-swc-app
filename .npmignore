@@ -1,3 +1,4 @@
 **/node_modules
 templates/**/yarn.lock
 postpublish.sh
+LICENSE
