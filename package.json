@@ -5,6 +5,9 @@
   "bin": "bin/index",
   "main": "src/index.js",
   "license": "MIT",
+  "scripts": {
+    "postpublish": "./postdeploy.sh"
+  },
   "keywords": [
     "cli",
     "create-app",
